@@ -4,118 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anita & Onome — Wedding Invitation</title>
-    <!-- Tailwind CSS CDN -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Premium Serif and Sans Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,400&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
+        /* Light-theme color palette matrix */
+        :root {
+            --bg-main: #FFFFFF;
+            --emerald-primary: #042B1A;
+            --emerald-faded: rgba(4, 43, 26, 0.7);
+            --emerald-trace: rgba(4, 43, 26, 0.08);
+            --baby-pink-card: #FFF1F2; /* Softest warm blush pink background for cards */
+            --baby-pink-border: #FBCFE8;
+        }
+
+        body {
+            background-color: var(--bg-main) !important;
+            color: var(--emerald-primary) !important;
+        }
+
+        .custom-card {
+            background-color: var(--baby-pink-card) !important;
+            border-color: var(--baby-pink-border) !important;
+        }
+
+        .custom-card:hover {
+            border-color: var(--emerald-primary) !important;
+        }
+
         .font-serif { font-family: 'Cormorant Garamond', serif; }
         .font-sans { font-family: 'Montserrat', sans-serif; }
         
-        /* Smooth fade-in animation for page load */
         .fade-in-up {
-            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body class="bg-[#042B1A] text-[#FBCFE8] font-sans antialiased overflow-x-hidden">
+<body class="font-sans antialiased overflow-x-hidden">
 
-    <!-- Top Left Corner Floral Filigree (Natively Drawn SVG) -->
-    <div class="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 text-[#FBCFE8]/20 pointer-events-none">
+    <div class="absolute top-0 left-0 w-36 h-36 md:w-56 md:h-56 pointer-events-none" style="color: var(--emerald-primary); opacity: 0.15;">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.75">
-            <path d="M0,0 Q30,10 40,40 Q10,30 0,0" fill="currentColor" fill-opacity="0.05"/>
-            <path d="M0,20 C15,25 25,40 30,60 C20,45 10,25 0,20"/>
-            <path d="M20,0 C25,15 40,25 60,30 C45,20 25,10 0,20"/>
-            <circle cx="25" cy="25" r="2" fill="currentColor"/>
-            <circle cx="40" cy="15" r="1.5" fill="currentColor"/>
-            <circle cx="15" cy="40" r="1.5" fill="currentColor"/>
+            <path d="M0,0 Q35,15 45,45 Q15,35 0,0" fill="currentColor" fill-opacity="0.05"/>
+            <path d="M0,25 C18,30 28,45 35,65 C22,50 12,30 0,25"/>
+            <path d="M25,0 C30,18 45,28 65,35 C50,22 30,12 0,25"/>
+            <circle cx="28" cy="28" r="2" fill="currentColor"/>
+            <circle cx="45" cy="18" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="45" r="1.5" fill="currentColor"/>
         </svg>
     </div>
 
-    <!-- Top Right Corner Floral Filigree -->
-    <div class="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 text-[#FBCFE8]/20 pointer-events-none transform scale-x-[-1]">
+    <div class="absolute top-0 right-0 w-36 h-36 md:w-56 md:h-56 pointer-events-none transform scale-x-[-1]" style="color: var(--emerald-primary); opacity: 0.15;">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.75">
-            <path d="M0,0 Q30,10 40,40 Q10,30 0,0" fill="currentColor" fill-opacity="0.05"/>
-            <path d="M0,20 C15,25 25,40 30,60 C20,45 10,25 0,20"/>
-            <path d="M20,0 C25,15 40,25 60,30 C45,20 25,10 0,20"/>
-            <circle cx="25" cy="25" r="2" fill="currentColor"/>
+            <path d="M0,0 Q35,15 45,45 Q15,35 0,0" fill="currentColor" fill-opacity="0.05"/>
+            <path d="M0,25 C18,30 28,45 35,65 C22,50 12,30 0,25"/>
+            <path d="M25,0 C30,18 45,28 65,35 C50,22 30,12 0,25"/>
+            <circle cx="28" cy="28" r="2" fill="currentColor"/>
         </svg>
     </div>
 
-    <!-- Main Hero / Invitation Cover -->
     <section class="min-h-screen flex flex-col justify-between items-center px-6 py-16 text-center relative z-10">
-        <!-- Header Text -->
-        <div class="text-xs tracking-[0.3em] uppercase text-[#FBCFE8]/70 font-light mt-4 fade-in-up">
+        <div class="text-xs tracking-[0.35em] uppercase font-medium mt-6 fade-in-up" style="color: var(--emerald-faded);">
             The Celebration of a Lifetime
         </div>
 
-        <!-- Central Names Display -->
         <div class="my-auto space-y-6 max-w-2xl fade-in-up" style="animation-delay: 0.2s;">
-            <!-- Decorative Intertwined Rings SVG icon -->
-            <div class="text-[#FBCFE8]/40 flex justify-center mb-2">
-                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <div class="flex justify-center mb-4" style="color: var(--emerald-primary); opacity: 0.4;">
+                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
                     <circle cx="9" cy="12" r="5" />
                     <circle cx="15" cy="12" r="5" />
                 </svg>
             </div>
-            <h1 class="text-5xl md:text-7xl font-serif font-light tracking-wide text-[#FBCFE8]">
-                Anita <span class="italic font-normal text-[#FBCFE8]/60">&amp;</span> Onome
+            
+            <h1 class="text-5xl md:text-7xl font-serif font-light tracking-wide text-stone-900" style="color: var(--emerald-primary);">
+                Anita <span class="italic font-normal opacity-60">&</span> Onome
             </h1>
-            <div class="w-16 h-[0.5px] bg-[#FBCFE8]/40 mx-auto my-8"></div>
-            <p class="text-base md:text-lg tracking-[0.2em] uppercase text-[#FBCFE8]/80 font-light max-w-md mx-auto leading-relaxed">
+            
+            <div class="w-20 h-[0.5px] mx-auto my-8" style="background-color: var(--emerald-primary); opacity: 0.2;"></div>
+            
+            <p class="text-base md:text-lg tracking-[0.2em] uppercase font-light max-w-md mx-auto leading-relaxed" style="color: var(--emerald-faded);">
                 Request the pleasure of your company at their wedding celebration
             </p>
         </div>
 
-        <!-- Scroll Trigger Indicator -->
         <div class="space-y-4 fade-in-up" style="animation-delay: 0.4s;">
-            <p class="text-sm tracking-widest uppercase text-[#FBCFE8]/70">November 28, 2026</p>
-            <a href="#details" class="inline-block animate-bounce text-xs tracking-[0.25em] uppercase text-[#FBCFE8] hover:opacity-70 transition-opacity duration-300">
+            <p class="text-sm tracking-widest uppercase font-semibold" style="color: var(--emerald-primary);">November 28, 2026</p>
+            <a href="#details" class="inline-block animate-bounce text-xs tracking-[0.25em] uppercase hover:opacity-60 transition-opacity duration-300" style="color: var(--emerald-primary);">
                 View Details ↓
             </a>
         </div>
     </section>
 
-    <!-- Mid-Page Intersecting Decorative Divider -->
-    <div class="w-full flex justify-center text-[#FBCFE8]/10 my-4">
-        <svg class="w-48 h-6" viewBox="0 0 100 20" fill="none" stroke="currentColor" stroke-width="0.5">
+    <div class="w-full flex justify-center my-4 opacity-30" style="color: var(--emerald-primary);">
+        <svg class="w-64 h-6" viewBox="0 0 100 20" fill="none" stroke="currentColor" stroke-width="0.5">
             <path d="M0,10 Q50,0 100,10 Q50,20 0,10" />
         </svg>
     </div>
 
-    <!-- Details Section -->
-    <section id="details" class="py-24 px-6 max-w-4xl mx-auto relative z-10 transition-all duration-700">
-        <h2 class="text-center text-3xl font-serif italic text-[#FBCFE8] mb-16 tracking-wide">The Details</h2>
+    <section id="details" class="py-24 px-6 max-w-4xl mx-auto relative z-10">
+        <h2 class="text-center text-4xl font-serif italic mb-16 tracking-wide" style="color: var(--emerald-primary);">The Details</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Time Component -->
-            <div class="space-y-4 p-8 bg-[#032013] rounded-2xl border border-[#FBCFE8]/10 hover:border-[#FBCFE8]/30 transition-all duration-500 shadow-xl">
-                <div class="text-xs tracking-widest uppercase text-[#FBCFE8]/50 font-medium">When</div>
-                <h3 class="text-2xl font-serif text-[#FBCFE8] font-light">Saturday, November 28, 2026</h3>
-                <p class="text-sm text-[#FBCFE8]/70 font-light leading-relaxed">
-                    Ceremony details and times<br>
+            <div class="custom-card space-y-4 p-8 rounded-2xl border transition-all duration-500 shadow-sm">
+                <div class="text-xs tracking-widest uppercase font-bold" style="color: var(--emerald-faded);">When</div>
+                <h3 class="text-2xl font-serif font-medium" style="color: var(--emerald-primary);">Saturday, November 28, 2026</h3>
+                <p class="text-sm font-light leading-relaxed opacity-90" style="color: var(--emerald-faded);">
+                    Ceremony details and event times<br>
                     will be updated here shortly
                 </p>
             </div>
 
-            <!-- Location Component -->
-            <div class="space-y-4 p-8 bg-[#032013] rounded-2xl border border-[#FBCFE8]/10 hover:border-[#FBCFE8]/30 transition-all duration-500 shadow-xl">
-                <div class="text-xs tracking-widest uppercase text-[#FBCFE8]/50 font-medium">Where</div>
-                <h3 class="text-2xl font-serif text-[#FBCFE8] font-light">Iceland Event Centre</h3>
-                <p class="text-sm text-[#FBCFE8]/70 font-light leading-relaxed">
+            <div class="custom-card space-y-4 p-8 rounded-2xl border transition-all duration-500 shadow-sm">
+                <div class="text-xs tracking-widest uppercase font-bold" style="color: var(--emerald-faded);">Where</div>
+                <h3 class="text-2xl font-serif font-medium" style="color: var(--emerald-primary);">Iceland Event Centre</h3>
+                <p class="text-sm font-light leading-relaxed opacity-90" style="color: var(--emerald-faded);">
                     7 Muiz Banire Street, Off Egbeda-Idimu Road,<br>
                     Egbeda, Lagos, Nigeria
                 </p>
                 <div class="pt-2">
-                    <!-- Direct deep-link query targeted to the exact geolocation in Egbeda -->
-                    <a href="https://www.google.com/maps/search/?api=1&query=Iceland+Civic+Centre+Egbeda+Lagos" target="_blank" class="inline-block text-xs uppercase tracking-widest text-[#FBCFE8] border-b border-[#FBCFE8]/40 hover:border-[#FBCFE8] transition-all duration-300 pb-0.5">
+                    <a href="https://maps.google.com/?q=Iceland+Event+Centre+Egbeda" target="_blank" class="inline-block text-xs uppercase tracking-widest border-b hover:opacity-70 transition-all duration-300 pb-0.5" style="color: var(--emerald-primary); border-color: var(--emerald-primary);">
                         Open Map Directions →
                     </a>
                 </div>
@@ -123,26 +137,22 @@
         </div>
     </section>
 
-    <!-- RSVP Section Platform -->
     <section id="rsvp" class="py-24 px-4 max-w-2xl mx-auto relative z-10">
         <div class="text-center space-y-4 mb-12">
-            <h2 class="text-4xl font-serif text-[#FBCFE8] font-light">Kindly Respond</h2>
-            <p class="text-sm text-[#FBCFE8]/60 tracking-wide font-light">Please complete your confirmation details below so we can prepare for your presence.</p>
+            <h2 class="text-4xl font-serif font-light" style="color: var(--emerald-primary);">Kindly Respond</h2>
+            <p class="text-sm tracking-wide font-light" style="color: var(--emerald-faded);">Please complete your confirmation details below so we can prepare for your presence.</p>
         </div>
 
-        <!-- Form Box container with soft theme styling -->
-        <div class="bg-[#032013] p-1 md:p-2 rounded-2xl border border-[#FBCFE8]/10 shadow-2xl">
-            <!-- Tally.so script integration anchor point -->
-            <div id="form-placeholder" class="text-center py-16 space-y-4">
-                <div class="w-8 h-8 border-2 border-[#FBCFE8] border-t-transparent rounded-full animate-spin mx-auto opacity-60"></div>
-                <p class="text-xs uppercase tracking-[0.2em] text-[#FBCFE8]/40">System Database Connecting...</p>
+        <div class="custom-card p-1 md:p-2 rounded-2xl border shadow-sm">
+            <div id="form-placeholder" class="text-center py-20 space-y-4">
+                <div class="w-8 h-8 border-2 border-t-transparent rounded-full animate-spin mx-auto" style="border-color: var(--emerald-primary); border-top-color: transparent;"></div>
+                <p class="text-xs uppercase tracking-[0.25em] opacity-50" style="color: var(--emerald-primary);">System Database Connecting...</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer Graphic Layout Component -->
-    <footer class="py-16 text-center text-xs tracking-[0.3em] uppercase text-[#FBCFE8]/30 relative z-10">
-        <div class="w-8 h-[0.5px] bg-[#FBCFE8]/20 mx-auto mb-6"></div>
+    <footer class="py-20 text-center text-xs tracking-[0.3em] uppercase relative z-10" style="color: var(--emerald-faded);">
+        <div class="w-12 h-[0.5px] mx-auto mb-6" style="background-color: var(--emerald-primary); opacity: 0.2;"></div>
         Thank you for sharing in our joy.
     </footer>
 
