@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Invited</title>
+    <!-- Tailwind CSS CDN for zero-setup styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#FBFBFA] text-[#2C2C2A] font-sans antialiased selection:bg-[#E2DED0]">
+
+    <!-- Hero / Invitation Cover Section -->
+    <section class="min-h-screen flex flex-col justify-between items-center px-6 py-12 text-center border-b border-[#EAE9E4]">
+        <!-- Subtle Top Accent -->
+        <div class="text-xs tracking-[0.25em] uppercase text-[#8C8A82] font-medium">
+            The Celebration of a Lifetime
+        </div>
+
+        <!-- Main Names & Announcement -->
+        <div class="my-auto space-y-6 max-w-2xl">
+            <h1 class="text-5xl md:text-7xl font-serif font-light tracking-wide text-[#1A1A19]">
+                Alex <span class="italic font-normal text-[#6B6960]">&amp;</span> Taylor
+            </h1>
+            <div class="w-12 h-[1px] bg-[#8C8A82] mx-auto my-8"></div>
+            <p class="text-base md:text-lg tracking-[0.15em] uppercase text-[#4A4944] font-light">
+                Request the pleasure of your company<br>at their wedding celebration
+            </p>
+        </div>
+
+        <!-- Call to Action / Scroll Prompt -->
+        <div class="space-y-4">
+            <p class="text-sm tracking-widest uppercase text-[#8C8A82]">October 24, 2026</p>
+            <a href="#details" class="inline-block animate-bounce text-xs tracking-[0.2em] uppercase text-[#6B6960] hover:text-[#1A1A19] transition-colors duration-300">
+                View Details ↓
+            </a>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="details" class="py-24 px-6 max-w-4xl mx-auto border-b border-[#EAE9E4]">
+        <h2 class="text-center text-3xl font-serif italic text-[#1A1A19] mb-16 tracking-wide">The Details</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+            <!-- Date & Time Card -->
+            <div class="space-y-3 p-6 bg-white rounded-2xl shadow-sm border border-[#F0EFEA]">
+                <div class="text-xs tracking-widest uppercase text-[#8C8A82] font-medium">When</div>
+                <h3 class="text-xl font-serif text-[#1A1A19]">Saturday, October 24, 2026</h3>
+                <p class="text-sm text-[#6B6960] font-light leading-relaxed">
+                    Ceremony begins promptly at 4:00 PM<br>
+                    Reception to follow immediately after
+                </p>
+            </div>
+
+            <!-- Location Card -->
+            <div class="space-y-3 p-6 bg-white rounded-2xl shadow-sm border border-[#F0EFEA]">
+                <div class="text-xs tracking-widest uppercase text-[#8C8A82] font-medium">Where</div>
+                <h3 class="text-xl font-serif text-[#1A1A19]">The Grand Conservatory</h3>
+                <p class="text-sm text-[#6B6960] font-light leading-relaxed">
+                    123 Pavilion Way, Garden District<br>
+                    Lagos, Nigeria
+                </p>
+                <a href="https://maps.google.com" target="_blank" class="inline-block text-xs uppercase tracking-wider text-[#8C8A82] border-b border-[#8C8A82] hover:text-[#1A1A19] hover:border-[#1A1A19] transition-all duration-300 pb-0.5">
+                    Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section (Where Tally will live) -->
+    <section id="rsvp" class="py-24 px-4 max-w-2xl mx-auto bg-gradient-to-b from-transparent to-[#F7F6F2]">
+        <div class="text-center space-y-4 mb-12">
+            <h2 class="text-4xl font-serif text-[#1A1A19]">Kindly Respond</h2>
+            <p class="text-sm text-[#6B6960] tracking-wide font-light">Please RSVP by September 1, 2026 so we can finalize our arrangements.</p>
+        </div>
+
+        <!-- Interactive Form Container -->
+        <div class="bg-white p-6 md:p-10 rounded-2xl shadow-md border border-[#EAE9E4]">
+            <!-- Placeholder Content until Step 2 -->
+            <div id="form-placeholder" class="text-center py-12 space-y-4">
+                <div class="w-10 h-10 border-2 border-[#8C8A82] border-t-transparent rounded-full animate-spin mx-auto"></div>
+                <p class="text-xs uppercase tracking-widest text-[#8C8A82]">Connecting securely to guest database...</p>
+            </div>
+            
+            <!-- We will replace the placeholder with the Tally iframe snippet in Step 2 -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-xs tracking-widest uppercase text-[#A19F96]">
+        Thank you for sharing in our joy.
+    </footer>
+
+</body>
+</html>
