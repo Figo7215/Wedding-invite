@@ -9,31 +9,30 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     
     <style>
-        /* Light-theme color palette matrix */
+        /* Force render the exact dark emerald and pink palette matrix */
         :root {
-            --bg-main: #FFFFFF;
-            --emerald-primary: #042B1A;
-            --emerald-faded: rgba(4, 43, 26, 0.7);
-            --emerald-trace: rgba(4, 43, 26, 0.08);
-            --baby-pink-card: #FFF1F2; /* Softest warm blush pink background for cards */
-            --baby-pink-border: #FBCFE8;
+            --emerald-deep: #042B1A;
+            --emerald-card: #032013;
+            --baby-pink: #FBCFE8;
+            --pink-dim: rgba(251, 207, 232, 0.6);
+            --pink-trace: rgba(251, 207, 232, 0.1);
         }
 
         body {
-            background-color: var(--bg-main) !important;
-            color: var(--emerald-primary) !important;
+            background-color: var(--emerald-deep) !important;
+            color: var(--baby-pink) !important;
         }
 
         .custom-card {
-            background-color: var(--baby-pink-card) !important;
-            border-color: var(--baby-pink-border) !important;
+            background-color: var(--emerald-card) !important;
+            border-color: var(--pink-trace) !important;
         }
 
         .custom-card:hover {
-            border-color: var(--emerald-primary) !important;
+            border-color: var(--pink-dim) !important;
         }
 
         .font-serif { font-family: 'Cormorant Garamond', serif; }
@@ -50,9 +49,9 @@
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
 
-    <div class="absolute top-0 left-0 w-36 h-36 md:w-56 md:h-56 pointer-events-none" style="color: var(--emerald-primary); opacity: 0.15;">
+    <div class="absolute top-0 left-0 w-36 h-36 md:w-56 md:h-56 pointer-events-none" style="color: var(--baby-pink); opacity: 0.25;">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.75">
-            <path d="M0,0 Q35,15 45,45 Q15,35 0,0" fill="currentColor" fill-opacity="0.05"/>
+            <path d="M0,0 Q35,15 45,45 Q15,35 0,0" fill="currentColor" fill-opacity="0.08"/>
             <path d="M0,25 C18,30 28,45 35,65 C22,50 12,30 0,25"/>
             <path d="M25,0 C30,18 45,28 65,35 C50,22 30,12 0,25"/>
             <circle cx="28" cy="28" r="2" fill="currentColor"/>
@@ -61,9 +60,9 @@
         </svg>
     </div>
 
-    <div class="absolute top-0 right-0 w-36 h-36 md:w-56 md:h-56 pointer-events-none transform scale-x-[-1]" style="color: var(--emerald-primary); opacity: 0.15;">
+    <div class="absolute top-0 right-0 w-36 h-36 md:w-56 md:h-56 pointer-events-none transform scale-x-[-1]" style="color: var(--baby-pink); opacity: 0.25;">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.75">
-            <path d="M0,0 Q35,15 45,45 Q15,35 0,0" fill="currentColor" fill-opacity="0.05"/>
+            <path d="M0,0 Q35,15 45,45 Q15,35 0,0" fill="currentColor" fill-opacity="0.08"/>
             <path d="M0,25 C18,30 28,45 35,65 C22,50 12,30 0,25"/>
             <path d="M25,0 C30,18 45,28 65,35 C50,22 30,12 0,25"/>
             <circle cx="28" cy="28" r="2" fill="currentColor"/>
@@ -71,65 +70,65 @@
     </div>
 
     <section class="min-h-screen flex flex-col justify-between items-center px-6 py-16 text-center relative z-10">
-        <div class="text-xs tracking-[0.35em] uppercase font-medium mt-6 fade-in-up" style="color: var(--emerald-faded);">
+        <div class="text-xs tracking-[0.35em] uppercase font-light mt-6 fade-in-up" style="color: var(--pink-dim);">
             The Celebration of a Lifetime
         </div>
 
         <div class="my-auto space-y-6 max-w-2xl fade-in-up" style="animation-delay: 0.2s;">
-            <div class="flex justify-center mb-4" style="color: var(--emerald-primary); opacity: 0.4;">
+            <div class="flex justify-center mb-4" style="color: var(--pink-dim);">
                 <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
                     <circle cx="9" cy="12" r="5" />
                     <circle cx="15" cy="12" r="5" />
                 </svg>
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-serif font-light tracking-wide text-stone-900" style="color: var(--emerald-primary);">
+            <h1 class="text-5xl md:text-7xl font-serif font-light tracking-wide" style="color: var(--baby-pink);">
                 Anita <span class="italic font-normal opacity-60">&</span> Onome
             </h1>
             
-            <div class="w-20 h-[0.5px] mx-auto my-8" style="background-color: var(--emerald-primary); opacity: 0.2;"></div>
+            <div class="w-20 h-[0.5px] mx-auto my-8" style="background-color: var(--pink-dim);"></div>
             
-            <p class="text-base md:text-lg tracking-[0.2em] uppercase font-light max-w-md mx-auto leading-relaxed" style="color: var(--emerald-faded);">
+            <p class="text-base md:text-lg tracking-[0.2em] uppercase font-light max-w-md mx-auto leading-relaxed" style="color: var(--baby-pink);">
                 Request the pleasure of your company at their wedding celebration
             </p>
         </div>
 
         <div class="space-y-4 fade-in-up" style="animation-delay: 0.4s;">
-            <p class="text-sm tracking-widest uppercase font-semibold" style="color: var(--emerald-primary);">November 28, 2026</p>
-            <a href="#details" class="inline-block animate-bounce text-xs tracking-[0.25em] uppercase hover:opacity-60 transition-opacity duration-300" style="color: var(--emerald-primary);">
+            <p class="text-sm tracking-widest uppercase font-medium" style="color: var(--baby-pink);">November 28, 2026</p>
+            <a href="#details" class="inline-block animate-bounce text-xs tracking-[0.25em] uppercase hover:opacity-60 transition-opacity duration-300" style="color: var(--baby-pink);">
                 View Details ↓
             </a>
         </div>
     </section>
 
-    <div class="w-full flex justify-center my-4 opacity-30" style="color: var(--emerald-primary);">
+    <div class="w-full flex justify-center my-4 opacity-20" style="color: var(--baby-pink);">
         <svg class="w-64 h-6" viewBox="0 0 100 20" fill="none" stroke="currentColor" stroke-width="0.5">
             <path d="M0,10 Q50,0 100,10 Q50,20 0,10" />
         </svg>
     </div>
 
     <section id="details" class="py-24 px-6 max-w-4xl mx-auto relative z-10">
-        <h2 class="text-center text-4xl font-serif italic mb-16 tracking-wide" style="color: var(--emerald-primary);">The Details</h2>
+        <h2 class="text-center text-4xl font-serif italic mb-16 tracking-wide" style="color: var(--baby-pink);">The Details</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="custom-card space-y-4 p-8 rounded-2xl border transition-all duration-500 shadow-sm">
-                <div class="text-xs tracking-widest uppercase font-bold" style="color: var(--emerald-faded);">When</div>
-                <h3 class="text-2xl font-serif font-medium" style="color: var(--emerald-primary);">Saturday, November 28, 2026</h3>
-                <p class="text-sm font-light leading-relaxed opacity-90" style="color: var(--emerald-faded);">
+            <div class="custom-card space-y-4 p-8 rounded-2xl border transition-all duration-500 shadow-2xl">
+                <div class="text-xs tracking-widest uppercase font-semibold" style="color: var(--pink-dim);">When</div>
+                <h3 class="text-2xl font-serif font-light" style="color: var(--baby-pink);">Saturday, November 28, 2026</h3>
+                <p class="text-sm font-light leading-relaxed opacity-80" style="color: var(--baby-pink);">
                     Ceremony details and event times<br>
                     will be updated here shortly
                 </p>
             </div>
 
-            <div class="custom-card space-y-4 p-8 rounded-2xl border transition-all duration-500 shadow-sm">
-                <div class="text-xs tracking-widest uppercase font-bold" style="color: var(--emerald-faded);">Where</div>
-                <h3 class="text-2xl font-serif font-medium" style="color: var(--emerald-primary);">Iceland Event Centre</h3>
-                <p class="text-sm font-light leading-relaxed opacity-90" style="color: var(--emerald-faded);">
+            <div class="custom-card space-y-4 p-8 rounded-2xl border transition-all duration-500 shadow-2xl">
+                <div class="text-xs tracking-widest uppercase font-semibold" style="color: var(--pink-dim);">Where</div>
+                <h3 class="text-2xl font-serif font-light" style="color: var(--baby-pink);">Iceland Event Centre</h3>
+                <p class="text-sm font-light leading-relaxed opacity-80" style="color: var(--baby-pink);">
                     7 Muiz Banire Street, Off Egbeda-Idimu Road,<br>
                     Egbeda, Lagos, Nigeria
                 </p>
                 <div class="pt-2">
-                    <a href="https://maps.google.com/?q=Iceland+Event+Centre+Egbeda" target="_blank" class="inline-block text-xs uppercase tracking-widest border-b hover:opacity-70 transition-all duration-300 pb-0.5" style="color: var(--emerald-primary); border-color: var(--emerald-primary);">
+                    <a href="https://maps.google.com/?q=Iceland+Event+Centre+Egbeda" target="_blank" class="inline-block text-xs uppercase tracking-widest border-b hover:opacity-100 transition-all duration-300 pb-0.5" style="color: var(--baby-pink); border-color: var(--pink-dim);">
                         Open Map Directions →
                     </a>
                 </div>
@@ -139,20 +138,29 @@
 
     <section id="rsvp" class="py-24 px-4 max-w-2xl mx-auto relative z-10">
         <div class="text-center space-y-4 mb-12">
-            <h2 class="text-4xl font-serif font-light" style="color: var(--emerald-primary);">Kindly Respond</h2>
-            <p class="text-sm tracking-wide font-light" style="color: var(--emerald-faded);">Please complete your confirmation details below so we can prepare for your presence.</p>
+            <h2 class="text-4xl font-serif font-light" style="color: var(--baby-pink);">Kindly Respond</h2>
+            <p class="text-sm tracking-wide font-light" style="color: var(--pink-dim);">Please complete your confirmation details below so we can prepare for your presence.</p>
         </div>
 
-        <div class="custom-card p-1 md:p-2 rounded-2xl border shadow-sm">
-            <div id="form-placeholder" class="text-center py-20 space-y-4">
-                <div class="w-8 h-8 border-2 border-t-transparent rounded-full animate-spin mx-auto" style="border-color: var(--emerald-primary); border-top-color: transparent;"></div>
-                <p class="text-xs uppercase tracking-[0.25em] opacity-50" style="color: var(--emerald-primary);">System Database Connecting...</p>
-            </div>
+        <div class="custom-card p-4 rounded-2xl border shadow-2xl">
+            <iframe 
+                data-tally-src="https://tally.so/embed/YOUR_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                loading="lazy" 
+                width="100%" 
+                height="300" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                title="Anita & Onome Wedding RSVP">
+            </iframe>
+            <script>
+                var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.getAttribute("data-tally-src")}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]'))v();else{var n=d.createElement("script");n.src=w,n.onload=v,n.onerror=v,d.body.appendChild(n)}
+            </script>
         </div>
     </section>
 
-    <footer class="py-20 text-center text-xs tracking-[0.3em] uppercase relative z-10" style="color: var(--emerald-faded);">
-        <div class="w-12 h-[0.5px] mx-auto mb-6" style="background-color: var(--emerald-primary); opacity: 0.2;"></div>
+    <footer class="py-20 text-center text-xs tracking-[0.3em] uppercase relative z-10" style="color: var(--pink-dim);">
+        <div class="w-12 h-[0.5px] mx-auto mb-6 opacity-30" style="background-color: var(--baby-pink);"></div>
         Thank you for sharing in our joy.
     </footer>
 
